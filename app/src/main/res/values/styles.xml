@@ -1,0 +1,39 @@
+<resources>
+
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="TextAppearance" />
+
+  <style name="TextAppearance.Test1" parent="TextAppearance.MaterialComponents.Headline2">
+    <!--    <item name="android:textSize">50px</item>-->
+
+    <!--    <item name="lineHeight">100px</item>-->
+  </style>
+
+  <style name="TextAppearance.Test2">
+    <item name="android:textSize">50px</item>
+
+    <item name="android:lineSpacingExtra">25px</item>
+  </style>
+
+  <style name="TextAppearance.Test3">
+    <item name="android:textSize">50px</item>
+
+    <!--    <item name="android:lineSpacingExtra">10px</item>-->
+    <item name="android:lineSpacingMultiplier">1.5</item>
+  </style>
+
+  <style name="TextAppearance.Test4">
+    <item name="android:textSize">50px</item>
+
+    <item name="android:lineSpacingExtra">0px</item>
+    <item name="android:elegantTextHeight">false</item>
+  </style>
+</resources>
+
+  <!--    <item name="android:fallbackLineSpacing">true</item>-->
+  <!--    <item name="android:includeFontPadding">true</item>-->
