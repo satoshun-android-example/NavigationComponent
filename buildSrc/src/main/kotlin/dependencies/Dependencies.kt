@@ -19,8 +19,8 @@ const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTIN
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
 
 const val KTX = "androidx.core:core-ktx:1.1.0-rc01"
-const val ACTIVITYX = "androidx.activity:activity-ktx:1.0.0-rc01"
-const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.1.0-rc01"
+const val ACTIVITYX = "androidx.activity:activity-ktx:1.1.0-alpha01"
+const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.2.0-alpha01"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.1.0-rc01"
 const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0-alpha02"
