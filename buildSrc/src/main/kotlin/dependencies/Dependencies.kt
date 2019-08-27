@@ -5,7 +5,7 @@ const val MIN_SDK = 21
 const val TARGET_SDK = 28
 
 private const val VKOTLIN = "1.3.50"
-private const val VNAVIGATION = "2.1.0-beta02"
+private const val VNAVIGATION = "2.2.0-alpha01"
 
 const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.0"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
