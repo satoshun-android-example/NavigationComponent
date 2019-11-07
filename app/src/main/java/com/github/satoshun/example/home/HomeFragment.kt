@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.github.satoshun.example.databinding.HomeFragBinding
 
-internal class HomeFragment : Fragment() {
+class HomeFragment : Fragment() {
   private lateinit var binding: HomeFragBinding
 
   override fun onCreateView(
@@ -21,5 +22,9 @@ internal class HomeFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+
+    binding.submit.setOnClickListener {
+      findNavController().navigate(HomeFragmentDirections.navHomeToBasicDialog())
+    }
   }
 }

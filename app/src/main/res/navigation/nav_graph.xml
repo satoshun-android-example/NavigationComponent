@@ -7,5 +7,14 @@
   <fragment
     android:id="@+id/nav_home"
     android:name="com.github.satoshun.example.home.HomeFragment"
-    tools:layout="@layout/home_frag" />
+    tools:layout="@layout/home_frag">
+
+    <action
+      android:id="@+id/nav_home_to_basic_dialog"
+      app:destination="@id/nav_basic_dialog" />
+  </fragment>
+
+  <dialog
+    android:id="@+id/nav_basic_dialog"
+    android:name="com.github.satoshun.example.dialog.BasicDialog" />
 </navigation>
