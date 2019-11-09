@@ -1,0 +1,9 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/only_dialog_nav_graph"
+  tools:ignore="InvalidNavigation">
+
+  <dialog
+    android:id="@+id/nav_basic_dialog2"
+    android:name="com.github.satoshun.example.dialog.BasicDialog" />
+</navigation>

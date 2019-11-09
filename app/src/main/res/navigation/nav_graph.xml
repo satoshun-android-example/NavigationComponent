@@ -10,9 +10,17 @@
     tools:layout="@layout/home_frag">
 
     <action
+      android:id="@+id/nav_home_to_only_dialog"
+      app:destination="@id/nav_only_dialog" />
+
+    <action
       android:id="@+id/nav_home_to_basic_dialog"
       app:destination="@id/nav_basic_dialog" />
   </fragment>
+
+  <activity
+    android:id="@+id/nav_only_dialog"
+    android:name="com.github.satoshun.example.onlydialog.OnlyDialogActivity" />
 
   <dialog
     android:id="@+id/nav_basic_dialog"

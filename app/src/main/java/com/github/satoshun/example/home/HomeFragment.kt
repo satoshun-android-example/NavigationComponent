@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.github.satoshun.example.R
 import com.github.satoshun.example.databinding.HomeFragBinding
 
 class HomeFragment : Fragment() {
@@ -24,7 +25,11 @@ class HomeFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.submit.setOnClickListener {
-      findNavController().navigate(HomeFragmentDirections.navHomeToBasicDialog())
+      findNavController().navigate(R.id.nav_basic_dialog)
+    }
+
+    binding.onlyDialog.setOnClickListener {
+      findNavController().navigate(R.id.nav_only_dialog)
     }
   }
 }
