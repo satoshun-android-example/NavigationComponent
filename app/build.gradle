@@ -30,7 +30,7 @@ android {
   packagingOptions {
     exclude "META-INF/*"
   }
-  dataBinding {
+  viewBinding {
     enabled = true
   }
 }

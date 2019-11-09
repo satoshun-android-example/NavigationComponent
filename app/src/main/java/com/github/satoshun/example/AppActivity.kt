@@ -2,7 +2,6 @@ package com.github.satoshun.example
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import com.github.satoshun.example.databinding.AppActBinding
 
 class AppActivity : AppCompatActivity() {
@@ -10,6 +9,7 @@ class AppActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    binding = DataBindingUtil.setContentView(this, R.layout.app_act)
+    binding = AppActBinding.inflate(layoutInflater)
+    setContentView(binding.root)
   }
 }

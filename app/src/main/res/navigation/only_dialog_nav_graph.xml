@@ -5,9 +5,18 @@
 
   <fragment
     android:id="@+id/nav_empty"
-    android:name="androidx.fragment.app.Fragment" />
+    android:name="androidx.fragment.app.Fragment">
+
+    <action
+      android:id="@+id/nav_empty_to_basic_dialog2"
+      app:destination="@id/nav_basic_dialog2" />
+  </fragment>
 
   <dialog
     android:id="@+id/nav_basic_dialog2"
+    android:name="com.github.satoshun.example.dialog.BasicDialog" />
+
+  <dialog
+    android:id="@+id/nav_basic_dialog3"
     android:name="com.github.satoshun.example.dialog.BasicDialog" />
 </navigation>
