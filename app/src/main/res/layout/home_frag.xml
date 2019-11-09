@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <Button
-      android:id="@+id/submit"
+      android:id="@+id/basic"
       android:layout_width="match_parent"
       android:layout_height="64dp"
       android:layout_marginTop="16dp" />

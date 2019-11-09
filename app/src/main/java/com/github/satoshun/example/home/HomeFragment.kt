@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.submit.setOnClickListener {
+    binding.basic.setOnClickListener {
       findNavController().navigate(R.id.nav_basic_dialog)
     }
 
