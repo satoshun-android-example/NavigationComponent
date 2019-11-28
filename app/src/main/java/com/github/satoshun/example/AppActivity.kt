@@ -3,6 +3,7 @@ package com.github.satoshun.example
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.github.satoshun.example.databinding.AppActBinding
 
@@ -16,18 +17,22 @@ class AppActivity : AppCompatActivity() {
 
     setSupportActionBar(binding.toolbar)
 //    binding.toolbar.setupWithNavController(findNavController(R.id.nav_host_fragment))
-//    lifecycleScope.launch {
-//      delay(3000)
-//    }
 
     val navController = findNavController(R.id.nav_host_fragment)
-    setupActionBarWithNavController(navController)
-    navController.addOnDestinationChangedListener { controller, destination, arguments ->
+    val configuration = AppBarConfiguration(navController.graph)
+    setupActionBarWithNavController(navController, configuration)
+    navController.addOnDestinationChangedListener { _, destination, _ ->
       if (destination.id == R.id.nav_home) {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_close_black_24dp)
       } else {
         supportActionBar!!.setDisplayHomeAsUpEnabled(false)
+      }
+    }
+
+    binding.toolbar.setNavigationOnClickListener {
+      if (navController.currentDestination?.id in configuration.topLevelDestinations) {
+        finish()
       }
     }
   }
