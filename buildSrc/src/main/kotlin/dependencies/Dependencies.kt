@@ -4,10 +4,10 @@ const val COMPILE_SDK = 29
 const val MIN_SDK = 21
 const val TARGET_SDK = 29
 
-private const val VKOTLIN = "1.3.50"
-private const val VNAVIGATION = "2.2.0-rc01"
+private const val VKOTLIN = "1.3.61"
+private const val VNAVIGATION = "2.2.0-rc02"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.6.0-beta03"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.6.0-beta04"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN =
   "androidx.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
