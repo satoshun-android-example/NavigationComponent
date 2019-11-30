@@ -29,12 +29,19 @@ class AppActivity : AppCompatActivity() {
       }
     }
 
-    binding.toolbar.setNavigationOnClickListener {
-      if (navController.currentDestination?.id in configuration.topLevelDestinations) {
-        finish()
-      } else {
-        navController.popBackStack()
-      }
+//    binding.toolbar.setNavigationOnClickListener {
+//      if (navController.currentDestination?.id in configuration.topLevelDestinations) {
+//        finish()
+//      } else {
+//        navController.popBackStack()
+//      }
+//    }
+  }
+
+  override fun onSupportNavigateUp(): Boolean {
+    if (!findNavController(R.id.nav_host_fragment).navigateUp()) {
+      finish()
     }
+    return true
   }
 }
