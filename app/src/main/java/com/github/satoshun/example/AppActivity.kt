@@ -4,11 +4,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.github.satoshun.example.databinding.AppActBinding
 
 class AppActivity : AppCompatActivity() {
   private lateinit var binding: AppActBinding
+  private lateinit var configuration: AppBarConfiguration
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -20,13 +22,21 @@ class AppActivity : AppCompatActivity() {
 //    binding.toolbar.setupWithNavController(findNavController(R.id.nav_host_fragment))
 
     val navController = findNavController(R.id.nav_host_fragment)
-    val configuration = AppBarConfiguration(navController.graph)
+    configuration = AppBarConfiguration(navController.graph) {
+      finish()
+      true
+    }
     setupActionBarWithNavController(navController, configuration)
     navController.addOnDestinationChangedListener { _, destination, _ ->
       if (destination.id in configuration.topLevelDestinations) {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close_black_24dp)
       }
+    }
+
+    var suffix = "suf"
+    navController.addOnDestinationChangedListener { _, _, _ ->
+      supportActionBar?.title = "${supportActionBar?.title} $suffix"
     }
 
 //    binding.toolbar.setNavigationOnClickListener {
@@ -39,9 +49,6 @@ class AppActivity : AppCompatActivity() {
   }
 
   override fun onSupportNavigateUp(): Boolean {
-    if (!findNavController(R.id.nav_host_fragment).navigateUp()) {
-      finish()
-    }
-    return true
+    return findNavController(R.id.nav_host_fragment).navigateUp(configuration)
   }
 }
