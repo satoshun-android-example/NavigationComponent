@@ -16,23 +16,24 @@ class AppActivity : AppCompatActivity() {
     setContentView(binding.root)
 
     setSupportActionBar(binding.toolbar)
+
 //    binding.toolbar.setupWithNavController(findNavController(R.id.nav_host_fragment))
 
     val navController = findNavController(R.id.nav_host_fragment)
     val configuration = AppBarConfiguration(navController.graph)
     setupActionBarWithNavController(navController, configuration)
     navController.addOnDestinationChangedListener { _, destination, _ ->
-      if (destination.id == R.id.nav_home) {
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_close_black_24dp)
-      } else {
-        supportActionBar!!.setDisplayHomeAsUpEnabled(false)
+      if (destination.id in configuration.topLevelDestinations) {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close_black_24dp)
       }
     }
 
     binding.toolbar.setNavigationOnClickListener {
       if (navController.currentDestination?.id in configuration.topLevelDestinations) {
         finish()
+      } else {
+        navController.popBackStack()
       }
     }
   }

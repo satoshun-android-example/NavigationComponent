@@ -18,6 +18,11 @@
       app:destination="@id/nav_basic_dialog" />
   </fragment>
 
+  <fragment
+    android:id="@+id/nav_basic"
+    android:name="com.github.satoshun.example.basic.BasicFragment"
+    tools:layout="@layout/basic_frag" />
+
   <activity
     android:id="@+id/nav_only_dialog"
     android:name="com.github.satoshun.example.onlydialog.OnlyDialogActivity" />

@@ -5,10 +5,10 @@
   android:orientation="vertical">
 
   <Button
-    android:id="@+id/basic"
+    android:id="@+id/basic_dialog"
     android:layout_width="match_parent"
     android:layout_height="64dp"
-    android:text="BASIC"
+    android:text="BASIC Dialog"
     android:layout_marginTop="16dp" />
 
   <Button
@@ -16,4 +16,11 @@
     android:text="ONLY DIALOG"
     android:layout_width="match_parent"
     android:layout_height="64dp" />
+
+  <Button
+    android:id="@+id/sample"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:text="Sample"
+    android:layout_marginTop="16dp" />
 </LinearLayout>
