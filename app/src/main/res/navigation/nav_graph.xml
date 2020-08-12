@@ -17,6 +17,10 @@
     <action
       android:id="@+id/nav_home_to_basic_dialog"
       app:destination="@id/nav_basic_dialog" />
+
+    <action
+      android:id="@+id/nav_home_to_basic"
+      app:destination="@id/nav_basic" />
   </fragment>
 
   <fragment

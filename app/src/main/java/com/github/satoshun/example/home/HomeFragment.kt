@@ -15,15 +15,15 @@ class HomeFragment : Fragment(R.layout.home_frag) {
     binding = HomeFragBinding.bind(view)
 
     binding.basicDialog.setOnClickListener {
-      findNavController().navigate(R.id.nav_basic_dialog)
+      findNavController().navigate(HomeFragmentDirections.navHomeToBasicDialog())
     }
 
     binding.onlyDialog.setOnClickListener {
-      findNavController().navigate(R.id.nav_only_dialog)
+      findNavController().navigate(HomeFragmentDirections.navHomeToOnlyDialog())
     }
 
     binding.sample.setOnClickListener {
-      findNavController().navigate(R.id.nav_basic)
+      findNavController().navigate(HomeFragmentDirections.navHomeToBasic())
     }
   }
 }
