@@ -5,7 +5,7 @@ const val MIN_SDK = 21
 const val TARGET_SDK = 29
 
 private const val VKOTLIN = "1.3.71"
-private const val VNAVIGATION = "2.2.0"
+private const val VNAVIGATION = "2.3.0"
 
 const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.0.1"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
@@ -57,8 +57,6 @@ const val SAVEDSTATE_VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-savedst
 
 const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0"
 
-const val RECOMMENDATION = "androidx.recommendation:recommendation:1.0.0"
-
 const val RXJAVA = "io.reactivex.rxjava2:rxjava:2.2.0"
 const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
@@ -72,9 +70,6 @@ const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 private const val VDAGGER = "2.22.1"
 const val DAGGER_RUNTIME = "com.google.dagger:dagger:$VDAGGER"
 const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$VDAGGER"
-const val DAGGER_ANDROID_RUNTIME = "com.google.dagger:dagger-android:$VDAGGER"
-const val DAGGER_ANDROID_COMPILER = "com.google.dagger:dagger-android-processor:$VDAGGER"
-const val DAGGER_ANDROID_SUPPORT_RUNTIME = "com.google.dagger:dagger-android-support:$VDAGGER"
 
 const val GLIDE = "com.github.bumptech.glide:glide:4.9.0"
 
