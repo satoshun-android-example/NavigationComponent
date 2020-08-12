@@ -15,14 +15,17 @@ class HomeFragment : Fragment(R.layout.home_frag) {
     binding = HomeFragBinding.bind(view)
 
     binding.basicDialog.setOnClickListener {
+      println("TEST basicDialog")
       findNavController().navigate(HomeFragmentDirections.navHomeToBasicDialog())
     }
 
     binding.onlyDialog.setOnClickListener {
+      println("TEST onlyDialog")
       findNavController().navigate(HomeFragmentDirections.navHomeToOnlyDialog())
     }
 
     binding.sample.setOnClickListener {
+      println("TEST sample")
       findNavController().navigate(HomeFragmentDirections.navHomeToBasic())
     }
   }
