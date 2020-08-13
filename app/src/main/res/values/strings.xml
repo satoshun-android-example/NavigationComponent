@@ -1,3 +1,5 @@
 <resources>
   <string name="app_name">Navigation example</string>
+
+  <item name="last_clicked_ms" type="id" />
 </resources>
