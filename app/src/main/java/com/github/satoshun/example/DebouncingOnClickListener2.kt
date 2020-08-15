@@ -12,7 +12,8 @@ class DebouncingOnClickListener2(
     fun handle(hostView: View) {
       val last = hostView.getLastClickedMs()
       val currentTime = System.currentTimeMillis()
-      if (currentTime <= last + 1000) {
+      println("TEST2 $last $currentTime")
+      if (currentTime <= last + 10000) {
         return
       }
       hostView.setLastClickedMs(currentTime)

@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.satoshun.example.R
 import com.github.satoshun.example.databinding.HomeFragBinding
 import com.github.satoshun.example.setDebounceClickListener
+import com.github.satoshun.example.setDebounceClickListener2
 
 class HomeFragment : Fragment(R.layout.home_frag) {
   private lateinit var binding: HomeFragBinding
@@ -15,18 +16,18 @@ class HomeFragment : Fragment(R.layout.home_frag) {
     super.onViewCreated(view, savedInstanceState)
     binding = HomeFragBinding.bind(view)
 
-    binding.basicDialog.setDebounceClickListener {
-      println("TEST basicDialog")
+    binding.basicDialog.setDebounceClickListener2 {
+      println("TEST2 basicDialog")
       findNavController().navigate(HomeFragmentDirections.navHomeToBasicDialog())
     }
 
-    binding.onlyDialog.setDebounceClickListener {
-      println("TEST onlyDialog")
+    binding.onlyDialog.setDebounceClickListener2 {
+      println("TEST2 onlyDialog")
       findNavController().navigate(HomeFragmentDirections.navHomeToOnlyDialog())
     }
 
-    binding.sample.setDebounceClickListener {
-      println("TEST sample")
+    binding.sample.setDebounceClickListener2 {
+      println("TEST2 sample")
       findNavController().navigate(HomeFragmentDirections.navHomeToBasic())
     }
   }
